@@ -1,6 +1,5 @@
 # ExpenseTracker Pro
-**Live Demo on Render:**  
-👉 [https://expense-tracker-with-charts-ohjn.onrender.com](https://expense-tracker-with-charts-ohjn.onrender.com)
+👉 [Live Demo on Render](https://expense-tracker-with-charts-ohjn.onrender.com)
 
 A modern, full-stack expense tracking web application built with React and Express.js. ExpenseTracker Pro provides comprehensive personal finance management features including transaction recording, categorization, statistical analysis, and data visualization.
 
