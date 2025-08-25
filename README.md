@@ -1,7 +1,5 @@
 # ExpenseTracker Pro
- **Live Demo:**  
-👉 [Try it on Replit](https://583f23f4-0589-4d07-ae0a-783084cdb1a6-00-1d36t3ufgehmm.worf.replit.dev/)
-
+👉 ** Live Demo on Render:**  [https://expense-tracker-with-charts-ohjn.onrender.com](https://expense-tracker-with-charts-ohjn.onrender.com)
 A modern, full-stack expense tracking web application built with React and Express.js. ExpenseTracker Pro provides comprehensive personal finance management features including transaction recording, categorization, statistical analysis, and data visualization.
 
 ![ExpenseTracker Pro](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)
@@ -215,13 +213,14 @@ For production deployment with persistent data:
    ```
 
 ## 🚀 Deployment
-
-### Replit Deployment (Recommended)
-This application is optimized for Replit deployment:
-
-1. Import this repository into Replit
-2. The application will automatically configure and deploy
-3. Your live application will be available at `https://your-repl-name.yourusername.replit.app`
+Render Deployment (Recommended)
+1.Push your code to GitHub
+2.Go to Render and create a new Web Service
+3.Connect your GitHub repo
+4.Set environment variables:
+  PORT=5000
+  DATABASE_URL=your_postgres_url
+5.Render will build and deploy automatically
 
 ### Manual Deployment
 For other platforms:
@@ -266,4 +265,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Built using modern web development best practices
 - Special thanks to the open-source community for the amazing tools and libraries
 
----
