@@ -7,24 +7,42 @@ export default function Header() {
 
   const handleExportCSV = async () => {
     try {
-      const response = await fetch("/api/transactions/export/csv");
-      if (!response.ok) throw new Error("Export failed");
+      const response = await fetch("/api/transactions/export/csv", {
+        method: 'GET',
+        headers: {
+          'Accept': 'text/csv',
+        }
+      });
+      
+      if (!response.ok) {
+        throw new Error(`Export failed: ${response.status}`);
+      }
       
       const blob = await response.blob();
+      
+      // Create download link
       const url = window.URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "transactions.csv";
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      window.URL.revokeObjectURL(url);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `transactions-${new Date().toISOString().split('T')[0]}.csv`;
+      link.style.display = 'none';
+      
+      // Trigger download
+      document.body.appendChild(link);
+      link.click();
+      
+      // Cleanup
+      setTimeout(() => {
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url);
+      }, 100);
       
       toast({
         title: "Export Successful",
         description: "Your transactions have been exported to CSV.",
       });
     } catch (error) {
+      console.error("CSV Export Error:", error);
       toast({
         title: "Export Failed",
         description: "Failed to export transactions. Please try again.",
@@ -39,7 +57,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-primary" data-testid="app-title">
+              <h1 className="text-2xl font-bold" style={{ color: '#2563EB' }} data-testid="app-title">
                 ExpenseTracker Pro
               </h1>
             </div>
@@ -63,7 +81,8 @@ export default function Header() {
           <div className="flex items-center space-x-4">
             <Button 
               onClick={handleExportCSV}
-              className="bg-primary text-white hover:bg-primary/90"
+              className="text-white hover:opacity-90"
+              style={{ backgroundColor: '#2563EB' }}
               data-testid="button-export-csv"
             >
               <Download className="w-4 h-4 mr-2" />
