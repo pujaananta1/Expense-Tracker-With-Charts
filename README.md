@@ -260,10 +260,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Author
-
-Built with by [Your Name]
-
 ## 🙏 Acknowledgments
 
 - Inspired by financial management apps like Mint and Personal Capital
@@ -271,5 +267,3 @@ Built with by [Your Name]
 - Special thanks to the open-source community for the amazing tools and libraries
 
 ---
-
-⭐ If you found this project helpful, please give it a star on GitHub!
