@@ -262,7 +262,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-Built with ❤️ by [Your Name]
+Built with by [Your Name]
 
 ## 🙏 Acknowledgments
 
