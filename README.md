@@ -216,11 +216,15 @@ For production deployment with persistent data:
 ## 🚀 Deployment
 Render Deployment (Recommended)
 1.Push your code to GitHub
+
 2.Go to Render and create a new Web Service
+
 3.Connect your GitHub repo
+
 4.Set environment variables:
   PORT=5000
   DATABASE_URL=your_postgres_url
+  
 5.Render will build and deploy automatically
 
 ### Manual Deployment
