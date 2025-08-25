@@ -1,4 +1,6 @@
 # ExpenseTracker Pro
+ **Live Demo:**  
+👉 [Try it on Replit](https://583f23f4-0589-4d07-ae0a-783084cdb1a6-00-1d36t3ufgehmm.worf.replit.dev/)
 
 A modern, full-stack expense tracking web application built with React and Express.js. ExpenseTracker Pro provides comprehensive personal finance management features including transaction recording, categorization, statistical analysis, and data visualization.
 
